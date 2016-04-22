@@ -1,3 +1,5 @@
+// Run plug server to handle all request to localhost
+
 var http = require('http');
 var port = 8000;
 

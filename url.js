@@ -1,3 +1,5 @@
+// Work with urls via "url" module
+
 var urlLib = require('url');
 
 var params = urlLib.parse(
