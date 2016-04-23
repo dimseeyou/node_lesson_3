@@ -8,7 +8,7 @@ function onRequest(request, response) {
     'Content-Type': 'text/plain',
   });
 
-  response.write('Hello world');
+  response.write('Hello world!');
   response.end();
 }
 

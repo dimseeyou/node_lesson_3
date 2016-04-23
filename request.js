@@ -25,7 +25,7 @@ request({
   if (error) {
     console.error(error);
   } else {
-    console.log(body);
     console.log(response.statusCode);
+    console.log(body);
   }
 });

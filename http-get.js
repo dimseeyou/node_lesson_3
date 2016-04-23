@@ -8,5 +8,5 @@ http.get('http://www.google.com/index.html', function(res) {
 
   res.resume();
 }).on('error', function(e) {
-  console.log('Got error: ', e.message);
+  console.error('Got error: ', e.message);
 });
