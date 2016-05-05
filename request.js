@@ -3,29 +3,29 @@
 var request = require('request');
 
 request({
-  method: 'POST',
+  method: 'post',
   uri: 'http://google.com',
   form: {
     key: 'value',
   },
 }, function (error, response, body) {
   if (error) {
-    console.error(error);
-  } else {
-    console.log(response.statusCode);
-    console.log(body);
+    return console.error(error);
   }
+
+  console.log(response.statusCode);
+  console.log(body);
 });
 
 
 request({
   method: 'get',
-  uri: 'http://lj.ru',
+  uri: 'http://lj.ru/',
 }, function (error, response, body) {
   if (error) {
-    console.error(error);
-  } else {
-    console.log(response.statusCode);
-    console.log(body);
+    return console.error(error);
   }
+
+  console.log(response.statusCode);
+  console.log(body);
 });
