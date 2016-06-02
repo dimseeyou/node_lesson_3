@@ -21,15 +21,15 @@ var options = {
 var req = http
   .request(options, function(res) {
     console.log('response: ', res.statusCode);
-    console.log('http headers: ', JSON.stringify(res.headers));
+    console.log('http headers: ', res.headers);
 
     res.on('data', function(chunk) {
-      console.log('BODY: ', chunk);
+      console.log('BODY: ', chunk.toString());
     });
     
     res.on('end', function() {
       console.log('No more data in response.');
-    })
+    });
   })
   .on('error', function(e) {
     console.error('problem with request: ', e.message);

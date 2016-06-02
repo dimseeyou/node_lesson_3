@@ -8,7 +8,7 @@ http
     console.log('http headers: ', res.headers);
 
     res.on('data', function(chunk) {
-      console.log('BODY: ', chunk);
+      console.log('BODY: ', chunk.toString());
     });
     
     res.on('end', function() {

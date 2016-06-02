@@ -5,11 +5,15 @@ var PORT = 8000;
 
 http
   .createServer(function(request, response) {
+    var answer = '<b>Hello world!</b>';
+
+
     response.writeHead(200, {
-      'Content-Type': 'text/plain',
+      'Content-Type': 'text/html',
+      'Content-Length': answer.length,
     });
 
-    response.write('Hello world!');
+    response.write(answer);
     response.end();
   })
   .listen(PORT, function () {
