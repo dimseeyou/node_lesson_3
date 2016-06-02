@@ -26,6 +26,7 @@ request('http://www.rbc.ru/', function (error, response, html) {
     return console.error('error is: ', error);
   } 
   
+  
   if ( response.statusCode !== 200 ) {
     return console.log('incorrect statusCode: ', response.statusCode);
   }
