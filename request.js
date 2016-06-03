@@ -1,7 +1,8 @@
-// Request library example
+// Модуль request
 
 var request = require('request');
 
+// Отправка POST формы
 request({
   method: 'post',
   uri: 'http://google.com',
@@ -17,7 +18,7 @@ request({
   console.log(body);
 });
 
-
+// Отправка GET-запроса
 request({
   method: 'get',
   uri: 'http://lj.ru/',

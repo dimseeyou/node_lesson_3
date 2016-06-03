@@ -1,7 +1,9 @@
-// Nodemailer example
+// Отправка почтовых сообщений,
+// используя модуль nodemailer
 
 var nodemailer = require('nodemailer');
 
+// Создаем транспорт, через который будем отправлять сообщения
 var transporter = nodemailer.createTransport({
   service: 'Yandex',
   auth: {
@@ -10,6 +12,7 @@ var transporter = nodemailer.createTransport({
   },
 });
 
+// Определяем настройки письма
 var mailOptions = {
     from: 'Most friendly guys <login-lesson3@yandex.ru>', // sender address
     to: 'login-lesson3@yandex.ru', // list of receivers
@@ -18,11 +21,12 @@ var mailOptions = {
     html: '<b>Hello from nodemailer!</b>' // html body
 };
 
-// send mail with defined transport object
+// Отправляем сообщение
 transporter.sendMail(mailOptions, function(error, info){
     if (error) {
         return console.error(error);
     }
+    
     console.log('Message sent: ', info.response);
     console.log('Full info: ', info);
 });

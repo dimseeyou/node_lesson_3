@@ -1,4 +1,4 @@
-// Introdution to http module
+// Простой запрос, используя http модуль
 
 var http = require('http');
 
@@ -7,10 +7,12 @@ http
     console.log('response: ', res.statusCode);
     console.log('http headers: ', res.headers);
 
+    // По событию, обрабатываем получаемые данные
     res.on('data', function(chunk) {
       console.log('BODY: ', chunk.toString());
     });
     
+    // Отлавливаем конец данных
     res.on('end', function() {
       console.log('No more data in response.');
     })
