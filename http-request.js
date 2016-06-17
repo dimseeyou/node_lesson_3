@@ -5,7 +5,7 @@ var http = require('http');
 
 // Кодируем данные в формат form-urlencoded
 var postData = querystring.stringify({
-  'msg' : 'Hello World!'
+  msg: 'Hello World!'
 });
 
 // Определяем настройки запроса
@@ -36,8 +36,8 @@ var req = http
       console.log('No more data in response.');
     });
   })
-  .on('error', function(e) {
-    console.error('problem with request: ', e.message);
+  .on('error', function(error) {
+    throw error;
   });
 
 // Запись тела запроса

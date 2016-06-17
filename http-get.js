@@ -17,6 +17,6 @@ http
       console.log('No more data in response.');
     })
   })
-  .on('error', function(e) {
-    console.error('Got error: ', e.message);
+  .on('error', function(error) {
+    throw error;
   });

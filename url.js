@@ -8,7 +8,7 @@ var params = url.parse(
   true
 );
 
-console.log('params is: ', params);
+// console.log('params is: ', params);
 
 // Изменяем параметры нашего адреса
 params.hash = '#anotherHash';

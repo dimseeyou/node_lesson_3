@@ -10,9 +10,8 @@ request({
     key: 'value',
   },
 }, function (error, response, body) {
-  if (error) {
-    return console.error(error);
-  }
+  if (error)
+    throw error;
 
   console.log(response.statusCode);
   console.log(body);
@@ -23,10 +22,9 @@ request({
   method: 'get',
   uri: 'http://lj.ru/',
 }, function (error, response, body) {
-  if (error) {
-    return console.error(error);
-  }
+  if (error)
+    throw error;
 
-  console.log(response.statusCode);
+  console.log('status code is: ', response.statusCode);
   console.log(body);
 });

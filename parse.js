@@ -5,14 +5,12 @@ var cheerio = require('cheerio');
 
 // Запрос ресурса
 request('https://www.gismeteo.ru/city/daily/4720/', function (error, response, html) {
-  if (error) {
-    return console.error('error is: ', error);
-  } 
+  if (error)
+    throw error;
   
   // Корректный ли ответ сервера?
-  if ( response.statusCode !== 200 ) {
+  if ( response.statusCode !== 200 )
     return console.log('incorrect statusCode: ', response.statusCode);
-  }
 
   // Загрузка данных в модуль cheerio
   var $ = cheerio.load(html);
@@ -26,14 +24,11 @@ request('https://www.gismeteo.ru/city/daily/4720/', function (error, response, h
 });
 
 request('http://www.rbc.ru/', function (error, response, html) {
-  if (error) {
-    return console.error('error is: ', error);
-  } 
-  
+  if (error)
+    throw error;
 
-  if ( response.statusCode !== 200 ) {
+  if ( response.statusCode !== 200 )
     return console.log('incorrect statusCode: ', response.statusCode);
-  }
 
   var $ = cheerio.load(html);
   
